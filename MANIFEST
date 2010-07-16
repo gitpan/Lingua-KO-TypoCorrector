@@ -23,6 +23,4 @@ README
 t/00.load.t
 t/01.base.t
 t/03.code.t
-t/perlcritic.t
-t/pod.t
 lib/Lingua/KO/TypoCorrector.pm

@@ -12,8 +12,7 @@ our @EXPORT = qw( toKorean );
 our %EXPORT_TAGS = ( 'all' => [@EXPORT ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
-our $VERSION = '0.01';
-
+our $VERSION = '0.02';
 
 our $en_h = "rRseEfaqQtTdwWczxvg"; 
 # ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ
@@ -95,6 +94,7 @@ sub replace {
 1;
 __END__
 
+=encoding utf8
 
 =head1 NAME
 
