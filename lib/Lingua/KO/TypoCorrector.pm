@@ -8,11 +8,11 @@ require Exporter;
 
 our @ISA = qw(Exporter);
 
-our @EXPORT = qw( toKorean );
+our @EXPORT = qw( to_hangul );
 our %EXPORT_TAGS = ( 'all' => [@EXPORT ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
-our $VERSION = '0.04';
+our $VERSION = '0.06';
 
 our $en_h = "rRseEfaqQtTdwWczxvg"; 
 
@@ -79,7 +79,7 @@ my $reg_f = "rt|sw|sg|fr|fa|fq|ft|fx|fv|fg|qt|r|R|s|e|f|a|q|t|T|d|w|c|z|x|v|g|";
 
 my $reg_exp = "(".$reg_h.")(".$reg_b.")((?:".$reg_f.")(?=(?:".$reg_h.")(?:".$reg_b."))|(?:".$reg_f."))";
 
-sub toKorean {
+sub to_hangul {
     my $text = shift;
     $text =~ s/$reg_exp/replace($1,$2,$3)/ge;
     return $text;
@@ -102,7 +102,7 @@ Lingua::KO::TypoCorrector - Typo Corrector for Korean language in using English
 =head1 SYNOPSIS
 
   use Lingua::KO::TypoCorrector;
-  print toKorean("dkssudgktpdy") # 안녕하세요 (Hello - Korean Language)
+  print to_hangul("dkssudgktpdy") # 안녕하세요 (Hello - Korean Language)
 
 =head1 DESCRIPTION
 

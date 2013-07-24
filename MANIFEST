@@ -1,10 +1,11 @@
+Build.PL
 Changes
-Makefile.PL
-MANIFEST
-META.yml
-README
-t/00.load.t
-t/01.base.t
-t/02.code.t
+LICENSE
+META.json
+README.md
+cpanfile
 lib/Lingua/KO/TypoCorrector.pm
-META.json                                Module JSON meta-data (added by MakeMaker)
+t/00_compile.t
+t/01_code.t
+META.yml
+MANIFEST
